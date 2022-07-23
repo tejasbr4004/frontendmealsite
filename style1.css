@@ -1,0 +1,244 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* CSS Variables*/
+:root{
+    --navbar-height: 59px;
+}
+
+/*Navigation Bar*/
+#navbar{
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: 0px;
+    position: sticky;
+}
+
+/* Navigation Bar:Logo and image */
+#logo{
+    margin: 10px 34px;
+}
+#logo img{
+    height: 60px;
+    margin: 3px 6px;
+    border-radius: 50%;
+    animation: loading 3s ease-in-out 1s infinite forwards;
+}
+
+@keyframes loading {
+    0%{
+        border-top:0px;
+    }
+    25%{
+        border-top: 3px solid white;
+        /* border-right: 3px solid white; */
+    }
+    50%{
+        border-right: 3px solid white;
+        /* border-bottom: 3px solid white; */
+    }
+    75%{
+        border-bottom: 3px solid white;
+        /* border-left:3px solid white; */
+    }
+    100%{
+        border-left: 3px solid white;
+        /* border-top: 3px solid white; */
+    }
+}
+
+/* Navigation Bar:List Styling */
+
+#navbar ul{
+    display: flex;
+    font-family: 'Baloo Bhai 2', cursive;
+}
+#navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.7;
+}
+#navbar ul li{
+    list-style: none;
+    font-size: 1.3rem;
+}
+
+#navbar ul li a{
+    color:antiquewhite;
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+#navbar ul li a:hover{
+    color:black;
+    background-color: white;
+    
+}
+
+/* home section */
+#home{
+    display: flex;
+    flex-direction:column;
+    padding: 3px 200px;
+    height: 550px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#home::before{
+    content: "";
+    position: absolute;
+    background:url('https://cdn.pixabay.com/photo/2015/05/04/10/16/vegetables-752153__340.jpg') no-repeat center center/cover; /*image from "pixabay" website*/
+    height: 642px;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: -1;
+    opacity:0.89;
+}
+#home h1{
+    color: white;
+    text-align: center;
+    font-family: 'Bree Serif', serif;
+}
+#home p{
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'Bree Serif', serif;
+}
+/*Services Section*/
+#services{
+    margin: 34px;
+    display: flex;
+}
+#services .box{
+    /* border: 2px solid brown; */
+    padding: 34px;
+    margin: 3px 6px;
+    border-radius: 28px;
+    background: white;
+    box-shadow: 10px 13px 10px purple , 12px 15px 10px red;
+
+}
+#services .box img{
+    height: 134px;
+    margin: auto;    /* margin:auto, will work only wen display is block.(it makes the content center)  */
+    display: block;
+}
+#services .box p{
+    font-family: 'Bree Serif', serif;
+    /* font-size: 1rem; */
+}
+/*clients-section*/
+#client-section{
+    position: relative;
+    /* height: 344px; */
+}
+#client-section::before{
+    content: "";
+    position: absolute;
+    background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTk687R91qwttRn0kooCSD9gqJtr3KFcQLWDA&usqp=CAU') no-repeat center center/cover;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.7;
+}
+#clients{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.client-item{
+      padding: 34px;
+}
+#clients img{
+    height: 124px;
+   border-radius: 34px;
+   cursor: pointer;
+}
+/*contact section*/
+#contact{
+    position: absolute;
+    height: 90px;
+    width: 100%;
+    /* border: 2px solid red; */
+    background:linear-gradient(rgb(237, 141, 117),white);
+    z-index: -1;
+}
+#contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact-method{
+    padding: 8px;
+}
+#contact h4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Bree Serif', serif;
+    font-size: 1.8rem;
+    color: rgb(98, 8, 88);
+    margin-top: 44px;
+    
+}
+#contact-box img{
+    height: 50px;
+    margin: 30px;
+    cursor: pointer;
+
+}
+
+ footer .centers{
+    background:black;
+    color: white;
+    padding: 9px 20px;
+    position: relative;
+    top: 232px;
+    height: 75px;
+    display: flex;
+    justify-content: center;    
+} 
+
+/* utility classess */
+.h-primary{
+    font-family: 'Bree Serif', serif;
+    font-size:3.8rem;
+    padding: 12px;
+}
+
+.h-secondary{
+    font-family: 'Bree Serif', serif;
+    font-size: 2.3rem;
+    padding: 12px;
+}
+.btn{
+    padding: 6px 20px;
+    border:2px solid white;
+    background-color: rgb(170, 52, 52);
+    color: white;
+    margin: 17px;
+    font-size: 1.5rem;
+    border-radius: 12px;
+    cursor: pointer;
+}
+ .center{
+     text-align: center;
+ }
